@@ -1,10 +1,14 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.lilittlecat.intellijpangu</id>
-    <name>intellij-pangu</name>
-    <vendor>lilittlecat</vendor>
+    <id>com.lilittlecat.plugin.intellij-pangu</id>
+    <name>Pangu</name>
+    <vendor email="lilittlecat@qq.com" url="https://github.com/LiLittleCat/intellij-generate-all-getter-and-setter">
+        LiLittleCat
+    </vendor>
+    <idea-version since-build="192.0"/>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.lilittlecat.intellijpangu.services.MyApplicationService"/>
