@@ -10,13 +10,18 @@
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.java</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.lilittlecat.intellijpangu.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.lilittlecat.intellijpangu.services.MyProjectService"/>
-    </extensions>
+<!--    <extensions defaultExtensionNs="com.intellij">-->
+<!--        <intentionAction>-->
+<!--            <className>com.lilittlecat.plugin.action.PanguIntentionAction</className>-->
+<!--        </intentionAction>-->
+<!--    </extensions>-->
 
-    <applicationListeners>
-        <listener class="com.github.lilittlecat.intellijpangu.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+
+    <actions>
+        <action id="PanguFormatAction" class="com.lilittlecat.plugin.action.PanguFormatAction" text="Pangu Format"
+                description="123">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl P" replace-all="true"/>
+        </action>
+    </actions>
 </idea-plugin>
