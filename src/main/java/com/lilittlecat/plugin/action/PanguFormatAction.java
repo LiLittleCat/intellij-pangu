@@ -16,6 +16,9 @@ import com.intellij.psi.PsiFile;
 import ws.vinta.pangu.Pangu;
 
 import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author LiLittleCat
@@ -43,32 +46,23 @@ public class PanguFormatAction extends AnAction {
             if (selectedText == null) {
                 // no selection, pangu all content of current file
                 String text = document.getText();
-                String formattedText = PANGU.spacingText(text);
-                CommandProcessor.getInstance().executeCommand(file.getProject(), () -> {
-                    WriteAction.run(() -> {
-                        document.setText(formattedText);
-                    });
-                }, GROUP_ID, null);
+                // todo use file to convert?
+                CommandProcessor.getInstance().executeCommand(file.getProject(), () ->
+                        WriteAction.run(() -> document.setText(formatText(text))), GROUP_ID, null);
             } else if (!selectedText.isBlank()) {
                 // selection, pangu selected text
                 int selectionStart = selectionModel.getSelectionStart();
                 int selectionEnd = selectionModel.getSelectionEnd();
-                String formattedText = PANGU.spacingText(selectedText);
-                CommandProcessor.getInstance().executeCommand(file.getProject(), () -> {
-                    WriteAction.run(() -> {
-                        document.replaceString(selectionStart, selectionEnd, formattedText);
-                    });
-                }, GROUP_ID, null);
+                // todo how to do with selection?
+                CommandProcessor.getInstance().executeCommand(file.getProject(), () ->
+                        WriteAction.run(() ->
+                                document.replaceString(selectionStart, selectionEnd, formatText(selectedText))), GROUP_ID, null);
             }
-            notification(MessageFormat.format("{0}: '{1}' success.", GROUP_ID, file.getName()), MessageType.INFO, e.getProject());
+            notification(MessageFormat.format("{0}: \"{1}\" success.", GROUP_ID, file.getName()), MessageType.INFO, e.getProject());
         } else {
             // notification: cannot edit current file
-            notification(MessageFormat.format("{0} fail: '{1}' is not writable.", GROUP_ID, file.getName()), MessageType.WARNING, e.getProject());
+            notification(MessageFormat.format("{0} fail: \"{1}\" is not writable.", GROUP_ID, file.getName()), MessageType.WARNING, e.getProject());
         }
-
-//        Editor editor = e.getRequiredData(CommonDataKeys.EDITOR);
-//        Project project = e.getRequiredData(CommonDataKeys.PROJECT);
-//        String name = e.getRequiredData(CommonDataKeys.PSI_FILE).getViewProvider().getVirtualFile().getName();
     }
 
     /**
@@ -81,5 +75,43 @@ public class PanguFormatAction extends AnAction {
     private static void notification(String message, MessageType messageType, Project project) {
         Notification notification = NOTIFICATION_GROUP.createNotification(message, messageType);
         Notifications.Bus.notify(notification, project);
+    }
+
+    /**
+     * split text by line break
+     *
+     * @param text text to split
+     * @return list of text
+     */
+    private List<String> splitText(String text) {
+        return new ArrayList<>(Arrays.asList(text.split("\n")));
+    }
+
+    /**
+     * join text by line break
+     *
+     * @param text text to join
+     * @return joined text
+     */
+    private String joinText(List<String> text) {
+        final StringBuilder stringBuilder = new StringBuilder();
+        for (String s : text) {
+            stringBuilder.append(s).append("\n");
+        }
+        return stringBuilder.toString();
+    }
+
+    /**
+     * format text
+     *
+     * @param text text to format
+     * @return formatted text
+     */
+    private String formatText(String text) {
+        List<String> formattedLines = new ArrayList<>();
+        for (String s : splitText(text)) {
+            formattedLines.add(PANGU.spacingText(s));
+        }
+        return PANGU.spacingText(joinText(formattedLines));
     }
 }
