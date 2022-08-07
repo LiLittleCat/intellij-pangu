@@ -18,6 +18,7 @@ import ws.vinta.pangu.Pangu;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -46,14 +47,12 @@ public class PanguFormatAction extends AnAction {
             if (selectedText == null) {
                 // no selection, pangu all content of current file
                 String text = document.getText();
-                // todo use file to convert?
                 CommandProcessor.getInstance().executeCommand(file.getProject(), () ->
                         WriteAction.run(() -> document.setText(formatText(text))), GROUP_ID, null);
             } else if (!selectedText.isBlank()) {
                 // selection, pangu selected text
                 int selectionStart = selectionModel.getSelectionStart();
                 int selectionEnd = selectionModel.getSelectionEnd();
-                // todo how to do with selection?
                 CommandProcessor.getInstance().executeCommand(file.getProject(), () ->
                         WriteAction.run(() ->
                                 document.replaceString(selectionStart, selectionEnd, formatText(selectedText))), GROUP_ID, null);
@@ -95,8 +94,12 @@ public class PanguFormatAction extends AnAction {
      */
     private String joinText(List<String> text) {
         final StringBuilder stringBuilder = new StringBuilder();
-        for (String s : text) {
-            stringBuilder.append(s).append("\n");
+        final Iterator<String> iterator = text.iterator();
+        while (iterator.hasNext()) {
+            stringBuilder.append(iterator.next());
+            if (iterator.hasNext()) {
+                stringBuilder.append("\n");
+            }
         }
         return stringBuilder.toString();
     }
@@ -112,6 +115,6 @@ public class PanguFormatAction extends AnAction {
         for (String s : splitText(text)) {
             formattedLines.add(PANGU.spacingText(s));
         }
-        return PANGU.spacingText(joinText(formattedLines));
+        return joinText(formattedLines);
     }
 }
