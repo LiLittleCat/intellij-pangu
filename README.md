@@ -27,8 +27,12 @@ If you are unfamiliar with `Pangu`, you can check out [pangu.js](https://github.
 ## Usage
 
 
+## Thanks
 
+- Thanks [vinta][vinta] for his great job [pangu.js][pangu.js].
+- [IntelliJ Platform Plugin Template][template].
 ---
-Plugin based on the [IntelliJ Platform Plugin Template][template].
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
+[vinta]: https://github.com/vinta
+[pangu.js]: https://github.com/vinta/pangu.js
