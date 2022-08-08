@@ -13,7 +13,7 @@ import com.intellij.openapi.editor.SelectionModel;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.MessageType;
 import com.intellij.psi.PsiFile;
-import ws.vinta.pangu.Pangu;
+import com.lilittlecat.plugin.pangu.Pangu;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
