@@ -4,4 +4,4 @@
 
 ## [Unreleased]
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- Automatic spacing for CJK (Chinese, Japanese, Korean) and half-width English, digit, and symbol characters.
