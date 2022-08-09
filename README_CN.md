@@ -6,15 +6,13 @@
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 
-[中文说明](README_CN.md)
-
 <!-- Plugin description -->
 
-Paranoid text spacing for good readability, `Pangu` is an IntelliJ IDEA plugin that automatically inserts whitespace between CJK (Chinese, Japanese, Korean), half-width English, digit, and symbol characters. 
+文本之间的间距可以提高可读性，`Pangu` 是一个可自动在 CJK（中文、日文、韩文）、英文、数字和符号之间插入空格的 IntelliJ IDEA 插件。
 
-You can use this plugin to spacing files including markdown, plain text, Java code, HTML, XML, and more.
+你可以使用这个插件来对当前编辑的文件进行空格插入，支持各种常见的文件格式，如markdown、Java、HTML、XML等。
 
-Here are some examples:
+例子：
 
 ```diff
 - 你好Hello世界
@@ -29,41 +27,47 @@ Here are some examples:
 
 <!-- Plugin description end -->
 
-## Installation
+## 安装
 
-- Using IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "intellij-pangu"</kbd> >
+- 使用 IDE 内部插件系统：
+
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>搜索"Pangu"</kbd> >
   <kbd>Install Plugin</kbd>
-  
-- Manually:
 
-  Download the [latest release](https://github.com/LiLittleCat/intellij-pangu/releases/latest) and install it manually using
+- 手动安装：
+
+  下载 [最新版本](https://github.com/LiLittleCat/intellij-pangu/releases/latest) 找到
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+  手动安装。
 
-## Usage
+## 使用
 
-There are three ways to use this plugin to spacing:
-- See editor popup menu > <kbd>Pangu Format</kbd>.
+有三种方式：
+
+- 在编辑器的弹出菜单中使用 <kbd>Pangu Format</kbd>。
 
   ![EditorPopupMenu](example/EditorPopupMenu.png)
 
 
-- See <kbd>Tools menu</kbd> > <kbd>Pangu Format</kbd>.
+- 在 <kbd>Tools</kbd> 中使用 <kbd>Pangu Format</kbd>。
 
   ![Tools](example/Tools.png)
 
 
-- use <kbd>⌥ + ⇧ + P</kbd> / <kbd>Alt + Shift + P</kbd> .
+- 使用快捷键 <kbd>⌥ + ⇧ + P</kbd> / <kbd>Alt + Shift + P</kbd> .
 
-## Thanks
+## 致谢
 
-- Thanks [XiaoYao][XiaoYao's link] for helping design the plugin icon.
-- Thanks [vinta][vinta] for his great job [pangu.js][pangu.js].
+- 感谢[XiaoYao][XiaoYao's link]帮忙设计插件图标。
+- 感谢 [vinta][vinta] 的盘古之白项目 [pangu.js][pangu.js].
 - [IntelliJ Platform Plugin Template][template].
+
 ---
 
 [XiaoYao's link]: https://space.bilibili.com/15765234
+
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
+
 [vinta]: https://github.com/vinta
+
 [pangu.js]: https://github.com/vinta/pangu.js
