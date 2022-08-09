@@ -2,7 +2,7 @@
 <idea-plugin>
     <id>com.lilittlecat.plugin.intellij-pangu</id>
     <name>Pangu</name>
-    <vendor email="lilittlecat@qq.com" url="https://github.com/LiLittleCat/intellij-generate-all-getter-and-setter">
+    <vendor email="lilittlecat@qq.com" url="https://github.com/LiLittleCat/intellij-pangu">
         LiLittleCat
     </vendor>
     <idea-version since-build="192.0"/>
