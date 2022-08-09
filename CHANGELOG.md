@@ -3,6 +3,9 @@
 # intellij-pangu Changelog
 
 ## [Unreleased]
+
+## [1.0.0]
 ### Added
 - Spacing selected content.
 - Spacing whole file.
+
