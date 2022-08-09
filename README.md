@@ -3,8 +3,8 @@
 # Pangu
 
 ![Build](https://github.com/LiLittleCat/intellij-pangu/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+[![Version](https://img.shields.io/jetbrains/plugin/v/19665-pangu.svg)](https://plugins.jetbrains.com/plugin/19665-pangu)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/19665-pangu.svg)](https://plugins.jetbrains.com/plugin/19665-pangu)
 
 [中文说明](README_CN.md)
 
