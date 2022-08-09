@@ -43,7 +43,6 @@ Here are some examples:
 
 ## Usage
 When you select some text, the plugin will only space the selected text.
-
 Otherwise, it will space the whole file.
 
 There are three ways to use this plugin to spacing:
@@ -55,7 +54,7 @@ There are three ways to use this plugin to spacing:
 
   ![Tools](example/Tools.png)
 
-- use <kbd>⌥ + ⇧ + P</kbd> / <kbd>Alt + Shift + P</kbd> .
+- Use <kbd>⌥ + ⇧ + P</kbd> / <kbd>Alt + Shift + P</kbd> .
 
 ## Thanks
 
