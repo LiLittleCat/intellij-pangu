@@ -42,11 +42,16 @@ Here are some examples:
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
 ## Usage
+When you select some text, the plugin will only space the selected text.
+
+Otherwise, it will space the whole file.
 
 There are three ways to use this plugin to spacing:
 - See editor popup menu > <kbd>Pangu Format</kbd>.
 
   ![EditorPopupMenu](example/EditorPopupMenu.png)
+  
+  You also can sel
 
 
 - See <kbd>Tools menu</kbd> > <kbd>Pangu Format</kbd>.

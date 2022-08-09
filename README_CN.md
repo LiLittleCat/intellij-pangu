@@ -10,7 +10,7 @@
 
 文本之间的间距可以提高可读性，`Pangu` 是一个可自动在 CJK（中文、日文、韩文）、英文、数字和符号之间插入空格的 IntelliJ IDEA 插件。
 
-你可以使用这个插件来对当前编辑的文件进行空格插入，支持各种常见的文件格式，如markdown、Java、HTML、XML等。
+你可以使用这个插件来对当前编辑的文件进行空格插入，支持各种常见的文件格式，如 markdown、Java、HTML、XML 等。
 
 例子：
 
@@ -31,7 +31,7 @@
 
 - 使用 IDE 内部插件系统：
 
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>搜索"Pangu"</kbd> >
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd> 搜索 "Pangu"</kbd> >
   <kbd>Install Plugin</kbd>
 
 - 手动安装：
@@ -41,6 +41,10 @@
   手动安装。
 
 ## 使用
+
+当你在文件中选中部分内容时，该插件只会在选中的部分进行空格插入。
+
+没有选中时，该插件会在当前文件的所有文本进行空格插入。
 
 有三种方式：
 
@@ -58,7 +62,7 @@
 
 ## 致谢
 
-- 感谢[XiaoYao][XiaoYao's link]帮忙设计插件图标。
+- 感谢 [XiaoYao][XiaoYao's link] 帮忙设计插件图标。
 - 感谢 [vinta][vinta] 的盘古之白项目 [pangu.js][pangu.js].
 - [IntelliJ Platform Plugin Template][template].
 
