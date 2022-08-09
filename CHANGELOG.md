@@ -4,4 +4,5 @@
 
 ## [Unreleased]
 ### Added
-- Automatic spacing for CJK (Chinese, Japanese, Korean) and half-width English, digit, and symbol characters.
+- Spacing selected content.
+- Spacing whole file.
