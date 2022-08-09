@@ -52,11 +52,9 @@
 
   ![EditorPopupMenu](example/EditorPopupMenu.png)
 
-
 - 在 <kbd>Tools</kbd> 中使用 <kbd>Pangu Format</kbd>。
 
   ![Tools](example/Tools.png)
-
 
 - 使用快捷键 <kbd>⌥ + ⇧ + P</kbd> / <kbd>Alt + Shift + P</kbd> .
 

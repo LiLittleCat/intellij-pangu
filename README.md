@@ -50,14 +50,10 @@ There are three ways to use this plugin to spacing:
 - See editor popup menu > <kbd>Pangu Format</kbd>.
 
   ![EditorPopupMenu](example/EditorPopupMenu.png)
-  
-  You also can sel
-
 
 - See <kbd>Tools menu</kbd> > <kbd>Pangu Format</kbd>.
 
   ![Tools](example/Tools.png)
-
 
 - use <kbd>⌥ + ⇧ + P</kbd> / <kbd>Alt + Shift + P</kbd> .
 
