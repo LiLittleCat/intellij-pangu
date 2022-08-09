@@ -1,7 +1,12 @@
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+Automatically inserts whitespace between CJK (Chinese, Japanese, Korean), half-width English, digit, and symbol characters.
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+### Usage
+There are three ways to use this plugin to spacing:
+- See editor popup menu > <kbd>Pangu Format</kbd>.
+- See <kbd>Tools</kbd> > <kbd>Pangu Format</kbd>.
+- Use <kbd>⌥ + ⇧ + P</kbd> / <kbd>Alt + Shift + P</kbd> .
 
-To keep everything working, do not remove `<!-- ... -->` sections.
+If you find something is not working or missing, feel free to submit a PR on [GitHub repo](https://github.com/LiLittleCat/intellij-pangu).
+
 <!-- Plugin description end -->
