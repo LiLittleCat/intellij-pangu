@@ -1,11 +1,18 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M32.0845 7.94025V4H24.0203V7.9896H16.029V4H7.91553V7.94025H4V36H16.0044V32.0045C16.0058 30.9457 16.4274 29.9308 17.1766 29.1826C17.9258 28.4345 18.9412 28.0143 20 28.0143C21.0588 28.0143 22.0743 28.4345 22.8234 29.1826C23.5726 29.9308 23.9942 30.9457 23.9956 32.0045V36H36V7.94025H32.0845Z"
-          fill="url(#paint0_linear)"/>
+<svg id="pangu" data-name="pangu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 339 339">
     <defs>
-        <linearGradient id="paint0_linear" x1="2.94192" y1="4.89955" x2="37.7772" y2="39.7345" gradientUnits="userSpaceOnUse">
-            <stop offset="0.15937" stop-color="#3BEA62"/>
-            <stop offset="0.5404" stop-color="#3C99CC"/>
-            <stop offset="0.93739" stop-color="#6B57FF"/>
+        <style>.cls-1{fill:url(#paint0_linear);}</style>
+        <linearGradient id="paint0_linear" x1="257.48" y1="200.79" x2="60.92" y2="133.76"
+                        gradientTransform="translate(23.36 -20.28) rotate(7.41)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#07c3f2"/>
+            <stop offset="0.11" stop-color="#19b0f4"/>
+            <stop offset="0.35" stop-color="#3c89f9"/>
+            <stop offset="0.58" stop-color="#566efc"/>
+            <stop offset="0.78" stop-color="#665dfe"/>
+            <stop offset="0.93" stop-color="#6b57ff"/>
         </linearGradient>
     </defs>
+    <title>pangu</title>
+    <path class="cls-1"
+          d="M270,38.53a66.47,66.47,0,0,0-5.31-7.72A107,107,0,0,1,184.12,51.3l-.95-.15c0-.05,0-.1,0-.15a7.28,7.28,0,0,0-5.59-8.17l-22.51-5a7.27,7.27,0,0,0-8.68,5.5l-1.59-.51-1.48-.48c-12.62-4.06-54-15.31-54-15.31l47.07,54.37L137.75,83l.35.41-.37,1.74q-.53,2.51-1.09,5c-.69,3.08-1.42,6.14-2.17,9.19-.18.82-.35,1.65-.54,2.47A459,459,0,0,1,50.66,280.64c-.06.07-.09.15-.14.22h0c-1.7,2.33-3,5.79-1,7.91A19.65,19.65,0,0,0,52.07,291l39.08,28.37a7.25,7.25,0,0,0,10.13-1.6,802.54,802.54,0,0,0,62.22-171c2.71-12,5.53-25.54,9.32-44.09L175,91.8l.31-.1a40.32,40.32,0,1,1,4.44,77.8,51.51,51.51,0,0,1-4.15,57.23A60.22,60.22,0,0,0,188,225.49a120.62,120.62,0,0,0,82-187Z"/>
 </svg>
