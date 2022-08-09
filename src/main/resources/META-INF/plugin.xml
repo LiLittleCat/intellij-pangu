@@ -13,7 +13,7 @@
     <actions>
         <action id="PanguFormatAction" class="com.lilittlecat.plugin.action.PanguFormatAction" text="Pangu Format"
                 description="Automatically insert whitespace between CJK (chinese, japanese, korean), half-width english, digit and symbol characters."
-        icon="/icons/test.svg">
+        icon="/icons/pangu.svg">
             <keyboard-shortcut keymap="$default" first-keystroke="alt shift P"/>
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <add-to-group group-id="ToolsMenu" anchor="first"/>
