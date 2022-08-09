@@ -8,7 +8,7 @@
 
 <!-- Plugin description -->
 
-文本之间的间距可以提高可读性，`Pangu` 是一个可自动在 CJK（中文、日文、韩文）、英文、数字和符号之间插入空格的 IntelliJ IDEA 插件。
+文本之间的间距可以提高可读性，`Pangu (PánGǔ)` 是一个可自动在 CJK（中文、日文、韩文）、英文、数字和符号之间插入空格的 IntelliJ IDEA 插件。
 
 你可以使用这个插件来对当前编辑的文件进行空格插入，支持各种常见的文件格式，如 markdown、Java、HTML、XML 等。
 
