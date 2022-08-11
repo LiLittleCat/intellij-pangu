@@ -4,7 +4,6 @@ import com.intellij.notification.Notification;
 import com.intellij.notification.NotificationDisplayType;
 import com.intellij.notification.NotificationGroup;
 import com.intellij.notification.Notifications;
-import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.actionSystem.DataContext;
@@ -13,6 +12,7 @@ import com.intellij.openapi.command.CommandProcessor;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
+import com.intellij.openapi.project.DumbAwareAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.MessageType;
 import com.intellij.psi.PsiFile;
@@ -23,10 +23,14 @@ import java.text.MessageFormat;
 import static com.lilittlecat.plugin.common.Constant.DISPLAY_NAME;
 
 /**
+ * Pangu format editor action.
+ *
  * @author LiLittleCat
  * @since 2022/8/6
  */
-public class PanguFormatAction extends AnAction {
+public class PanguFormatEditorAction extends DumbAwareAction {
+
+    public static final Integer ORDER = 0;
 
     private static final NotificationGroup NOTIFICATION_GROUP = new NotificationGroup(DISPLAY_NAME, NotificationDisplayType.BALLOON, true);
 

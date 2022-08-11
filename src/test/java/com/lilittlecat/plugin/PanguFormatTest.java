@@ -1,7 +1,7 @@
 package com.lilittlecat.plugin;
 
 import com.intellij.testFramework.fixtures.LightJavaCodeInsightFixtureTestCase;
-import com.lilittlecat.plugin.action.PanguFormatAction;
+import com.lilittlecat.plugin.action.PanguFormatEditorAction;
 import org.junit.Test;
 
 /**
@@ -13,7 +13,7 @@ public class PanguFormatTest extends LightJavaCodeInsightFixtureTestCase {
     @Test
     public void test(){
         myFixture.configureByText("test.md", "你好Hello世界");
-        myFixture.testAction(new PanguFormatAction());
+        myFixture.testAction(new PanguFormatEditorAction());
         System.out.println(myFixture.getFile().getText());
     }
 
