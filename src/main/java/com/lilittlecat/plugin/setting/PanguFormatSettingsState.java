@@ -5,6 +5,7 @@ import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
 import com.intellij.util.xmlb.XmlSerializerUtil;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -16,7 +17,7 @@ import org.jetbrains.annotations.Nullable;
         storages = @Storage("PanguFormatSettingsPlugin.xml")
 )
 public class PanguFormatSettingsState implements PersistentStateComponent<PanguFormatSettingsState> {
-    public boolean panguFormatWhenReformatCode = true;
+    public boolean isPanguFormatWhenReformatCode = true;
 
     @Nullable
     @Override
@@ -25,7 +26,7 @@ public class PanguFormatSettingsState implements PersistentStateComponent<PanguF
     }
 
     @Override
-    public void loadState(PanguFormatSettingsState state) {
+    public void loadState(@NotNull PanguFormatSettingsState state) {
         XmlSerializerUtil.copyBean(state, this);
     }
 

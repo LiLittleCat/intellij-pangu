@@ -14,13 +14,14 @@
                 description="Automatically insert whitespace between CJK (chinese, japanese, korean), half-width english, digit and symbol characters."
                 icon="/icons/pangu.svg">
             <keyboard-shortcut keymap="$default" first-keystroke="alt shift P"/>
+<!--            <keyboard-shortcut keymap="$default" first-keystroke="control shift L"/>-->
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
         <action id="Pangu.Format.VCS.CommitMessage" class="com.lilittlecat.plugin.action.PanguFormatVCSCommitMessageAction" text="Pangu Format"
                 description="Automatically insert whitespace between CJK (chinese, japanese, korean), half-width english, digit and symbol characters."
                 icon="/icons/pangu.svg">
-            <keyboard-shortcut keymap="$default" first-keystroke="alt shift P"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="control shift P"/>
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="first"/>
         </action>
     </actions>

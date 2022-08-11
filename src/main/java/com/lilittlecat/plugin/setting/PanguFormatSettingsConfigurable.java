@@ -5,7 +5,6 @@ import com.lilittlecat.plugin.common.Constant;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import com.intellij.openapi.vcs.changes.ignore.lang.IgnoreCommenter;import com.intellij.openapi.project.DumbAware;
 
 import javax.swing.*;
 
@@ -40,19 +39,19 @@ public class PanguFormatSettingsConfigurable implements SearchableConfigurable {
     @Override
     public boolean isModified() {
         PanguFormatSettingsState settings = PanguFormatSettingsState.getInstance();
-        return mySettingsComponent.getPanguFormatWhenReformatCode() != settings.panguFormatWhenReformatCode;
+        return mySettingsComponent.getPanguFormatWhenReformatCode() != settings.isPanguFormatWhenReformatCode;
     }
 
     @Override
     public void apply() {
         PanguFormatSettingsState settings = PanguFormatSettingsState.getInstance();
-        settings.panguFormatWhenReformatCode = mySettingsComponent.getPanguFormatWhenReformatCode();
+        settings.isPanguFormatWhenReformatCode = mySettingsComponent.getPanguFormatWhenReformatCode();
     }
 
     @Override
     public void reset() {
         PanguFormatSettingsState settings = PanguFormatSettingsState.getInstance();
-        mySettingsComponent.setPanguFormatWhenReformatCode(settings.panguFormatWhenReformatCode);
+        mySettingsComponent.setPanguFormatWhenReformatCode(settings.isPanguFormatWhenReformatCode);
     }
 
     @Override
