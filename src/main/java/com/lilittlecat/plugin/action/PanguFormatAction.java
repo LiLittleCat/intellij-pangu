@@ -4,7 +4,10 @@ import com.intellij.notification.Notification;
 import com.intellij.notification.NotificationDisplayType;
 import com.intellij.notification.NotificationGroup;
 import com.intellij.notification.Notifications;
-import com.intellij.openapi.actionSystem.*;
+import com.intellij.openapi.actionSystem.AnAction;
+import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.CommonDataKeys;
+import com.intellij.openapi.actionSystem.DataContext;
 import com.intellij.openapi.application.WriteAction;
 import com.intellij.openapi.command.CommandProcessor;
 import com.intellij.openapi.editor.Document;
@@ -16,19 +19,16 @@ import com.intellij.psi.PsiFile;
 import com.lilittlecat.plugin.pangu.Pangu;
 
 import java.text.MessageFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+
+import static com.lilittlecat.plugin.common.Constant.DISPLAY_NAME;
 
 /**
  * @author LiLittleCat
  * @since 2022/8/6
  */
 public class PanguFormatAction extends AnAction {
-    private static final String GROUP_ID = "Pangu Format";
 
-    private static final NotificationGroup NOTIFICATION_GROUP = new NotificationGroup(GROUP_ID, NotificationDisplayType.BALLOON, true);
+    private static final NotificationGroup NOTIFICATION_GROUP = new NotificationGroup(DISPLAY_NAME, NotificationDisplayType.BALLOON, true);
 
     private static final Pangu PANGU = new Pangu();
 
@@ -48,19 +48,19 @@ public class PanguFormatAction extends AnAction {
                 // no selection, pangu all content of current file
                 String text = document.getText();
                 CommandProcessor.getInstance().executeCommand(file.getProject(), () ->
-                        WriteAction.run(() -> document.setText(formatText(text))), GROUP_ID, null);
+                        WriteAction.run(()-> document.setText(PANGU.formatText(text))), DISPLAY_NAME, null);
             } else if (!selectedText.isBlank()) {
                 // selection, pangu selected text
                 int selectionStart = selectionModel.getSelectionStart();
                 int selectionEnd = selectionModel.getSelectionEnd();
                 CommandProcessor.getInstance().executeCommand(file.getProject(), () ->
                         WriteAction.run(() ->
-                                document.replaceString(selectionStart, selectionEnd, formatText(selectedText))), GROUP_ID, null);
+                                document.replaceString(selectionStart, selectionEnd, PANGU.formatText(selectedText))), DISPLAY_NAME, null);
             }
-            notification(MessageFormat.format("{0}: \"{1}\" success.", GROUP_ID, file.getName()), MessageType.INFO, e.getProject());
+            notification(MessageFormat.format("{0}: \"{1}\"success.", DISPLAY_NAME, file.getName()), MessageType.INFO, e.getProject());
         } else {
             // notification: cannot edit current file
-            notification(MessageFormat.format("{0} fail: \"{1}\" is not writable.", GROUP_ID, file.getName()), MessageType.WARNING, e.getProject());
+            notification(MessageFormat.format("{0} fail: \"{1}\"is not writable.", DISPLAY_NAME, file.getName()), MessageType.WARNING, e.getProject());
         }
     }
 
@@ -76,45 +76,4 @@ public class PanguFormatAction extends AnAction {
         Notifications.Bus.notify(notification, project);
     }
 
-    /**
-     * split text by line break
-     *
-     * @param text text to split
-     * @return list of text
-     */
-    private List<String> splitText(String text) {
-        return new ArrayList<>(Arrays.asList(text.split("\n")));
-    }
-
-    /**
-     * join text by line break
-     *
-     * @param text text to join
-     * @return joined text
-     */
-    private String joinText(List<String> text) {
-        final StringBuilder stringBuilder = new StringBuilder();
-        final Iterator<String> iterator = text.iterator();
-        while (iterator.hasNext()) {
-            stringBuilder.append(iterator.next());
-            if (iterator.hasNext()) {
-                stringBuilder.append("\n");
-            }
-        }
-        return stringBuilder.toString();
-    }
-
-    /**
-     * format text
-     *
-     * @param text text to format
-     * @return formatted text
-     */
-    private String formatText(String text) {
-        List<String> formattedLines = new ArrayList<>();
-        for (String s : splitText(text)) {
-            formattedLines.add(PANGU.spacingText(s));
-        }
-        return joinText(formattedLines);
-    }
 }

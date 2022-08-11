@@ -5,6 +5,10 @@
 package com.lilittlecat.plugin.pangu;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -165,6 +169,52 @@ public class Pangu {
             br.close();
             bw.close();
         }
+    }
+
+
+
+    /**
+     * format text
+     *
+     * @param text text to format
+     * @return formatted text
+     */
+    public String formatText(String text) {
+        List<String> formattedLines = new ArrayList<>();
+        for (String s : splitText(text)) {
+            formattedLines.add(spacingText(s));
+        }
+        return joinText(formattedLines);
+    }
+
+
+
+    /**
+     * split text by line break
+     *
+     * @param text text to split
+     * @return list of text
+     */
+    private List<String> splitText(String text) {
+        return new ArrayList<>(Arrays.asList(text.split("\n")));
+    }
+
+    /**
+     * join text by line break
+     *
+     * @param text text to join
+     * @return joined text
+     */
+    private String joinText(List<String> text) {
+        final StringBuilder stringBuilder = new StringBuilder();
+        final Iterator<String> iterator = text.iterator();
+        while (iterator.hasNext()) {
+            stringBuilder.append(iterator.next());
+            if (iterator.hasNext()) {
+                stringBuilder.append("\n");
+            }
+        }
+        return stringBuilder.toString();
     }
 
 }
