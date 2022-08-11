@@ -8,7 +8,6 @@
     <idea-version since-build="192.0"/>
 
     <depends>com.intellij.modules.platform</depends>
-    <depends>com.intellij.java</depends>
 
     <actions>
         <action id="PanguFormatAction" class="com.lilittlecat.plugin.action.PanguFormatAction" text="Pangu Format"

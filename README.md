@@ -10,7 +10,7 @@
 
 <!-- Plugin description -->
 
-Paranoid text spacing for good readability, `Pangu  (PánGǔ)` is an IntelliJ IDEA plugin that automatically inserts whitespace between CJK (Chinese, Japanese, Korean), half-width English, digit, and symbol characters. 
+Paranoid text spacing for good readability, `Pangu  (PánGǔ)` is an IntelliJ Platform-Based IDEs plugin that automatically inserts whitespace between CJK (Chinese, Japanese, Korean), half-width English, digit, and symbol characters. 
 
 You can use this plugin to spacing files including markdown, plain text, Java code, HTML, XML, and more.
 
