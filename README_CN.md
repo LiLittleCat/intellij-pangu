@@ -54,7 +54,7 @@
 
   ![Tools](example/Tools.png)
 
-- 使用快捷键 <kbd>⌥ + ⇧ + P</kbd> / <kbd>Alt + Shift + P</kbd> .
+- Use <kbd>⌥ + .</kbd> / <kbd>Alt + .</kbd> 。
 
 ## 致谢
 

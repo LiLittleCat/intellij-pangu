@@ -8,7 +8,7 @@ Otherwise, it will space the whole file.
 There are three ways to use this plugin to spacing:
 - See editor popup menu > <kbd>Pangu Format</kbd>.
 - See <kbd>Tools</kbd> > <kbd>Pangu Format</kbd>.
-- Use <kbd>⌥ + ⇧ + P</kbd> / <kbd>Alt + Shift + P</kbd> .
+- Use <kbd>⌥ + .</kbd> / <kbd>Alt + .</kbd> .
 
 If you find something is not working or missing, feel free to submit an issue on [GitHub repo](https://github.com/LiLittleCat/intellij-pangu).
 

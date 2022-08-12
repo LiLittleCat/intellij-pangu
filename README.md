@@ -54,7 +54,7 @@ There are three ways to use this plugin to spacing:
 
   ![Tools](example/Tools.png)
 
-- Use <kbd>⌥ + ⇧ + P</kbd> / <kbd>Alt + Shift + P</kbd> .
+- Use <kbd>⌥ + .</kbd> / <kbd>Alt + .</kbd> .
 
 ## Thanks
 

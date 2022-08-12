@@ -14,16 +14,16 @@
                 text="Pangu Format"
                 description="Pangu format text in editor"
                 icon="/icons/pangu.svg">
-            <keyboard-shortcut keymap="$default" first-keystroke="alt shift P"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt PERIOD"/>
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
         <action id="Pangu.Format.VCS.CommitMessage"
-                class="com.lilittlecat.plugin.action.PanguFormatVCSCommitMessageAction"
+                class="com.lilittlecat.plugin.action.PanguFormatCommitMessageAction"
                 text="Pangu Format Commit Message"
                 description="Pangu format commit message"
                 icon="/icons/pangu.svg">
-            <keyboard-shortcut keymap="$default" first-keystroke="alt shift P"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt PERIOD"/>
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="first"/>
         </action>
     </actions>
@@ -37,4 +37,7 @@
                 displayName="Pangu"/>
         <applicationService serviceImplementation="com.lilittlecat.plugin.setting.PanguFormatSettingsState"/>
     </extensions>
+    <applicationListeners>
+        <listener class="com.lilittlecat.plugin.action.PanguFormatActionListener" topic="com.intellij.openapi.actionSystem.ex.AnActionListener"/>
+    </applicationListeners>
 </idea-plugin>
