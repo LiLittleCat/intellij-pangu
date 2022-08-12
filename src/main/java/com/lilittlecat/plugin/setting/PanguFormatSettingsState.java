@@ -31,7 +31,7 @@ public class PanguFormatSettingsState implements PersistentStateComponent<PanguF
     }
 
     public static PanguFormatSettingsState getInstance() {
-        return ApplicationManager.getApplication().getComponent(PanguFormatSettingsState.class);
+        return ApplicationManager.getApplication().getService(PanguFormatSettingsState.class);
     }
 
 }
