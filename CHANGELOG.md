@@ -4,6 +4,7 @@
 
 ## [Unreleased]
 
+## [1.1.0]
 ### Added
 - Support all IntelliJ Platform-Based IDEs.
 - Support format in commit message.
@@ -14,4 +15,3 @@
 ### Added
 - Spacing selected content.
 - Spacing whole file.
-
