@@ -10,26 +10,18 @@
 
     <actions>
         <action id="Pangu.Format.Editor"
-                class="com.lilittlecat.plugin.action.PanguFormatEditorAction"
+                class="com.lilittlecat.plugin.action.PanguFormatAction"
                 text="Pangu Format"
                 description="Pangu format text in editor"
                 icon="/icons/pangu.svg">
             <keyboard-shortcut keymap="$default" first-keystroke="alt PERIOD"/>
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <add-to-group group-id="ToolsMenu" anchor="first"/>
-        </action>
-        <action id="Pangu.Format.VCS.CommitMessage"
-                class="com.lilittlecat.plugin.action.PanguFormatCommitMessageAction"
-                text="Pangu Format Commit Message"
-                description="Pangu format commit message"
-                icon="/icons/pangu.svg">
-            <keyboard-shortcut keymap="$default" first-keystroke="alt PERIOD"/>
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="first"/>
         </action>
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">
-        <actionPromoter implementation="com.lilittlecat.plugin.action.PanguFormatActionPromoter"/>
         <applicationConfigurable
                 parentId="tools"
                 instance="com.lilittlecat.plugin.setting.PanguFormatSettingsConfigurable"
@@ -38,6 +30,7 @@
         <applicationService serviceImplementation="com.lilittlecat.plugin.setting.PanguFormatSettingsState"/>
     </extensions>
     <applicationListeners>
-        <listener class="com.lilittlecat.plugin.action.PanguFormatActionListener" topic="com.intellij.openapi.actionSystem.ex.AnActionListener"/>
+        <listener class="com.lilittlecat.plugin.listener.PanguFormatActionListener"
+                  topic="com.intellij.openapi.actionSystem.ex.AnActionListener"/>
     </applicationListeners>
 </idea-plugin>
