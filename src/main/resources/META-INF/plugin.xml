@@ -12,7 +12,7 @@
         <action id="Pangu.Format.Editor"
                 class="com.lilittlecat.plugin.action.PanguFormatAction"
                 text="Pangu Format"
-                description="Pangu format text in editor"
+                description="Pangu format"
                 icon="/icons/pangu.svg">
             <keyboard-shortcut keymap="$default" first-keystroke="alt PERIOD"/>
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>

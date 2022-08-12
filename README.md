@@ -42,19 +42,43 @@ Here are some examples:
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
 ## Usage
-When you select some text, the plugin will only space the selected text.
+
+You can use this plugin to spacing content in editor and commit message.
+
+### In Editor
+When you select some text in editor, the plugin will only space the selected text.
 Otherwise, it will space the whole file.
 
-There are three ways to use this plugin to spacing:
-- See editor popup menu > <kbd>Pangu Format</kbd>.
+There are three ways to use:
+- See editor popup menu > <kbd>Pangu Format</kbd>
 
   ![EditorPopupMenu](example/EditorPopupMenu.png)
 
-- See <kbd>Tools menu</kbd> > <kbd>Pangu Format</kbd>.
+- Use <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
 
-  ![Tools](example/Tools.png)
+- Use Reformat Code Action (<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd>  by default)
 
-- Use <kbd>⌥ + .</kbd> / <kbd>Alt + .</kbd> .
+  Pangu Format Action will perform after internal Reformat Code Action.
+
+  You can disable this feature in <kbd>Settings/Preferences</kbd> > <kbd>Tools</kbd> > <kbd>Pangu</kbd>
+
+  ![Setting](example/Setting.png)
+  
+
+### In Commit message
+
+There are also three ways to use this plugin in commit message:
+
+- Click the Pangu Format icon besides the commit message text area.
+
+  ![CommitMessage](example/CommitMessage.png)
+
+- Use <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
+
+- Use Reformat Commit Message Action (<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd>  by default)
+
+  Pangu Format Action will perform after internal Reformat Commit Message action.
+
 
 ## Thanks
 

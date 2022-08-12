@@ -42,19 +42,42 @@
 
 ## 使用
 
+你可以使用这个插件对编辑器中的文本和提交信息里的文本进行空格插入格式化。
+
+### 编辑器中的文本
+
 当你在文件中选中部分内容时，该插件只会在选中的部分进行空格插入。 没有选中时，该插件会在当前文件的所有文本进行空格插入。
 
 有三种使用方式：
 
-- 在编辑时右键弹出菜单中使用 <kbd>Pangu Format</kbd>。
+- 在编辑时右键弹出菜单中使用 <kbd>Pangu Format</kbd>
 
   ![EditorPopupMenu](example/EditorPopupMenu.png)
 
-- 在 <kbd>Tools</kbd> 中使用 <kbd>Pangu Format</kbd>。
+- 使用快捷键 <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
 
-  ![Tools](example/Tools.png)
+- 使用软件自带格式化代码功能（默认快捷键：<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd>）
+  
+  插件会在自带格式化代码功能之后执行空格插入。
 
-- Use <kbd>⌥ + .</kbd> / <kbd>Alt + .</kbd> 。
+  你可以在 <kbd>Settings/Preferences</kbd> > <kbd>Tools</kbd> > <kbd>Pangu</kbd> 关闭此功能：
+
+  ![Setting](example/Setting.png)
+
+
+### 提交信息中的文本
+
+同样有三种方式：
+
+- 点击提交信息旁边的图标
+
+  ![CommitMessage](example/CommitMessage.png)
+
+- 使用快捷键 <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
+
+- 使用软件自带格式化提交信息功能（默认快捷键：<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd>）
+
+  插件会在自带格式化提交信息功能之后执行空格插入。
 
 ## 致谢
 
