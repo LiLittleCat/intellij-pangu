@@ -11,13 +11,16 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * Pangy format commit message action.
- * todo, keymap won't work in commit dialog
  *
  * @author LiLittleCat
  * @see com.intellij.openapi.vcs.actions.ShowMessageHistoryAction
  * @since 2022/8/11
  */
 public class PanguFormatVCSCommitMessageAction extends DumbAwareAction {
+
+    public PanguFormatVCSCommitMessageAction() {
+        setEnabledInModalContext(true);
+    }
 
     public static final Integer ORDER = 1;
 
