@@ -56,7 +56,7 @@ There are three ways to use:
 
 - Use <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
 
-- Use Reformat Code Action (<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd>  by default)
+- Use Reformat Code Action (<kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>  by default)
 
   Pangu Format Action will perform after internal Reformat Code Action.
 
@@ -75,7 +75,7 @@ There are also three ways to use this plugin in commit message:
 
 - Use <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
 
-- Use Reformat Commit Message Action (<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd>  by default)
+- Use Reformat Commit Message Action (<kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>  by default)
 
   Pangu Format Action will perform after internal Reformat Commit Message action.
 

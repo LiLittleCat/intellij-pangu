@@ -3,6 +3,7 @@
 # intellij-pangu Changelog
 
 ## [Unreleased]
+- Update plugin description.
 
 ### Added
 - Support all IntelliJ Platform-Based IDEs.
