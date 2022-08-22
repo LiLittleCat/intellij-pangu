@@ -3,6 +3,8 @@
 # intellij-pangu Changelog
 
 ## [Unreleased]
+
+## [1.1.2]
 - Fix some issues.
 
 ## [1.1.1]
