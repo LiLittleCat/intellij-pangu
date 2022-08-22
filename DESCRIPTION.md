@@ -14,7 +14,7 @@ There are three ways to use:
 
 - Use <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
 
-- Use Reformat Code Action (<kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd> by default)
+- Use Reformat Code Action (<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd> by default)
 
   Pangu Format Action will perform after internal Reformat Code Action.
 
@@ -28,7 +28,7 @@ There are also three ways to use this plugin in commit message:
 
 - Use <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
 
-- Use Reformat Commit Message Action (<kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd> by default)
+- Use Reformat Commit Message Action (<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd> by default)
 
   Pangu Format Action will perform after internal Reformat Commit Message action.
 
@@ -52,7 +52,7 @@ If you find something is not working or missing, feel free to submit an issue on
 
 - 在编辑时右键弹出菜单中使用 <kbd>Pangu Format</kbd>
 - 使用快捷键 <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
-- 使用软件自带格式化代码功能（默认快捷键：<kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>）
+- 使用软件自带格式化代码功能（默认快捷键：<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd>）
 
   插件会在自带格式化代码功能之后执行空格插入。
 
@@ -66,7 +66,7 @@ If you find something is not working or missing, feel free to submit an issue on
 
 - 使用快捷键 <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
 
-- 使用软件自带格式化提交信息功能（默认快捷键：<kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>）
+- 使用软件自带格式化提交信息功能（默认快捷键：<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd>）
 
   插件会在自带格式化提交信息功能之后执行空格插入。
 

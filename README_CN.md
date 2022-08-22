@@ -56,8 +56,8 @@
 
 - 使用快捷键 <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
 
-- 使用软件自带格式化代码功能（默认快捷键：<kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>）
-  
+- 使用软件自带格式化代码功能（默认快捷键：<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd>）
+
   插件会在自带格式化代码功能之后执行空格插入。
 
   你可以在 <kbd>Settings/Preferences</kbd> > <kbd>Tools</kbd> > <kbd>Pangu</kbd> 关闭此功能：
@@ -75,7 +75,7 @@
 
 - 使用快捷键 <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
 
-- 使用软件自带格式化提交信息功能（默认快捷键：<kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>）
+- 使用软件自带格式化提交信息功能（默认快捷键：<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd>）
 
   插件会在自带格式化提交信息功能之后执行空格插入。
 

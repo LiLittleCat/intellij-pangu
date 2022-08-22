@@ -10,7 +10,7 @@
 
 <!-- Plugin description -->
 
-Paranoid text spacing for good readability, `Pangu  (PánGǔ)` is an IntelliJ Platform-Based IDEs plugin that automatically inserts whitespace between CJK (Chinese, Japanese, Korean), half-width English, digit, and symbol characters. 
+Paranoid text spacing for good readability, `Pangu  (PánGǔ)` is an IntelliJ Platform-Based IDEs plugin that automatically inserts whitespace between CJK (Chinese, Japanese, Korean), half-width English, digit, and symbol characters.
 
 You can use this plugin to spacing files including markdown, plain text, Java code, HTML, XML, and more.
 
@@ -32,10 +32,10 @@ Here are some examples:
 ## Installation
 
 - Using IDE built-in plugin system:
-  
+
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Pangu"</kbd> >
   <kbd>Install Plugin</kbd>
-  
+
 - Manually:
 
   Download the [latest release](https://github.com/LiLittleCat/intellij-pangu/releases/latest) and install it manually using
@@ -56,14 +56,14 @@ There are three ways to use:
 
 - Use <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
 
-- Use Reformat Code Action (<kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>  by default)
+- Use Reformat Code Action (<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd>  by default)
 
   Pangu Format Action will perform after internal Reformat Code Action.
 
   You can disable this feature in <kbd>Settings/Preferences</kbd> > <kbd>Tools</kbd> > <kbd>Pangu</kbd>
 
   ![Setting](example/Setting.png)
-  
+
 
 ### In Commit message
 
@@ -75,7 +75,7 @@ There are also three ways to use this plugin in commit message:
 
 - Use <kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>
 
-- Use Reformat Commit Message Action (<kbd>Alt + .</kbd> / <kbd>⌥ + .</kbd>  by default)
+- Use Reformat Commit Message Action (<kbd>Ctrl + Alt + L</kbd> / <kbd>⌘ + ⌥ + L</kbd>  by default)
 
   Pangu Format Action will perform after internal Reformat Commit Message action.
 
