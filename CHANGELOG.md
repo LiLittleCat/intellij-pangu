@@ -2,6 +2,9 @@
 
 # intellij-pangu Changelog
 
+## [Unreleased]
+- Fix some issues.
+
 ## [1.1.1]
 - Update plugin description.
 
