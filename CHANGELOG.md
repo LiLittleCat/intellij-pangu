@@ -3,6 +3,8 @@
 # intellij-pangu Changelog
 
 ## [Unreleased]
+
+## [1.1.3]
 ### Added
 - Support 2022.3
 
