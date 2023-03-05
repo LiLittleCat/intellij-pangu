@@ -3,6 +3,8 @@
 # intellij-pangu Changelog
 
 ## [Unreleased]
+- Fix some issues.
+- Update plugin framework.
 
 ## [1.1.3]
 ### Added
