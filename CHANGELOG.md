@@ -5,7 +5,8 @@
 ## [Unreleased]
 
 ## [1.2.0] - 2023-03-05
-- Fix some issues.%0D%0A- Update plugin framework.%0D%0A%0A[Unreleased]: null/compare/v1.1.3...HEAD
+- Fix some issues.
+- Update plugin framework.
 
 ## [1.1.3]
 
