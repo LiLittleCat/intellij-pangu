@@ -98,8 +98,9 @@ public class Pangu {
         Matcher qcMatcher = QUOTE_CJK.matcher(text);
         text = qcMatcher.replaceAll("$1 $2");
 
-        Matcher fixQuoteMatcher = FIX_QUOTE.matcher(text);
-        text = fixQuoteMatcher.replaceAll("$1$3$5");
+        // todo, ignore fix quote for now, consider the content between quotes is not meant to be modified
+//        Matcher fixQuoteMatcher = FIX_QUOTE.matcher(text);
+//        text = fixQuoteMatcher.replaceAll("$1$3$5");
 
         // CJK and brackets
         String oldText = text;
@@ -131,6 +132,9 @@ public class Pangu {
 
         Matcher acMatcher = ANSG_CJK.matcher(text);
         text = acMatcher.replaceAll("$1 $2");
+
+        // replace the first `//some comment` of a line to `// some comment` todo add more comment patterns from different languages
+        text = text.replaceAll("(?<=^|\\s)//(\\S.*)", "// $1");
 
         return text;
     }
@@ -172,7 +176,6 @@ public class Pangu {
     }
 
 
-
     /**
      * format text
      *
@@ -186,7 +189,6 @@ public class Pangu {
         }
         return joinText(formattedLines);
     }
-
 
 
     /**
