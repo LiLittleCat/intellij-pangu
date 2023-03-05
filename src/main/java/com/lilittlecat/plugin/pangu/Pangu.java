@@ -196,7 +196,8 @@ public class Pangu {
      * @return list of text
      */
     private List<String> splitText(String text) {
-        return new ArrayList<>(Arrays.asList(text.split("\n")));
+        // split text by line break, keep \n in the end of file
+        return Arrays.asList(text.split("(?<=\n)"));
     }
 
     /**
@@ -210,9 +211,6 @@ public class Pangu {
         final Iterator<String> iterator = text.iterator();
         while (iterator.hasNext()) {
             stringBuilder.append(iterator.next());
-            if (iterator.hasNext()) {
-                stringBuilder.append("\n");
-            }
         }
         return stringBuilder.toString();
     }
