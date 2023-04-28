@@ -83,6 +83,8 @@ public class Pangu {
             "((\\S+)#)" +
                     "([\\p{InHiragana}\\p{InKatakana}\\p{InBopomofo}\\p{InCJKCompatibilityIdeographs}\\p{InCJKUnifiedIdeographs}])"
     );
+    private static final Pattern DOUBLE_SLASH_ANSG = Pattern.compile("^//[\\u0370-\\u03ff\\u1f00-\\u1fffa-z0-9]");
+    private static final Pattern TRIPLE_SLASH_ANSG = Pattern.compile("^///[\\u0370-\\u03ff\\u1f00-\\u1fffa-z0-9]");
 
     /**
      * Performs a paranoid text spacing on {@code text}.
@@ -133,8 +135,14 @@ public class Pangu {
         Matcher acMatcher = ANSG_CJK.matcher(text);
         text = acMatcher.replaceAll("$1 $2");
 
-        // replace the first `//some comment` of a line to `// some comment` todo add more comment patterns from different languages
-        text = text.replaceAll("(?<=^|\\s)//(\\S.*)", "// $1");
+        // TODO add more comment patterns from different languages
+        if (DOUBLE_SLASH_ANSG.matcher(text).find()) {
+            // replace the first `//some comment` of a line to `// some comment`
+            text = text.replaceFirst("^//", "// ");
+        } else if (TRIPLE_SLASH_ANSG.matcher(text).find()) {
+            // `///` is a kind of comment syntax in Rust
+            text = text.replaceFirst("^///", "/// ");
+        }
 
         return text;
     }

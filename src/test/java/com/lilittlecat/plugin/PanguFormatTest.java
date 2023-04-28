@@ -19,4 +19,11 @@ public class PanguFormatTest extends LightJavaCodeInsightFixtureTestCase {
         System.out.println(myFixture.getFile().getText());
     }
 
+    @Test
+    public void testComment(){
+        myFixture.configureByText("test.rs", "///some comment");
+        myFixture.testAction(new PanguFormatAction());
+        System.out.println(myFixture.getFile().getText());
+    }
+
 }
