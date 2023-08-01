@@ -192,8 +192,25 @@ public class Pangu {
      */
     public String formatText(String text) {
         List<String> formattedLines = new ArrayList<>();
-        for (String s : splitText(text)) {
-            formattedLines.add(spacingText(s));
+        for (String string : splitText(text)) {
+            StringBuilder formattedString = new StringBuilder();
+            // Use regular expression to separate quoted and unquoted content
+            Pattern quotePattern = Pattern.compile("('.*?'|\".*?\")");
+            Matcher matcher = quotePattern.matcher(string);
+            int start = 0;
+            while (matcher.find()) {
+                // Unquoted content
+                String unquoted = string.substring(start, matcher.start());
+                formattedString.append(spacingText(unquoted));
+                // Quoted content as original
+                String quoted = string.substring(matcher.start(), matcher.end());
+                formattedString.append(quoted);
+                start = matcher.end();
+            }
+            // Last unquoted content
+            String unquoted = string.substring(start);
+            formattedString.append(spacingText(unquoted));
+            formattedLines.add(formattedString.toString());
         }
         return joinText(formattedLines);
     }
@@ -218,9 +235,8 @@ public class Pangu {
      */
     private String joinText(List<String> text) {
         final StringBuilder stringBuilder = new StringBuilder();
-        final Iterator<String> iterator = text.iterator();
-        while (iterator.hasNext()) {
-            stringBuilder.append(iterator.next());
+        for (String s : text) {
+            stringBuilder.append(s);
         }
         return stringBuilder.toString();
     }
