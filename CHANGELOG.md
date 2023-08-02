@@ -3,9 +3,10 @@
 # intellij-pangu Changelog
 
 ## [Unreleased]
+- fix: Do not format content within quotes in code. [#20](https://github.com/LiLittleCat/intellij-pangu/issues/20)
 
 ## [1.2.2] - 2023-04-28
-- Add support for `///` comments in Rust. [#18](https://github.com/LiLittleCat/intellij-pangu/issues/18)%0D%0A%0A[Unreleased]: https://github.com/LiLittleCat/intellij-pangu/compare/v1.2.1...HEAD
+- Add support for `///` comments in Rust. [#18](https://github.com/LiLittleCat/intellij-pangu/issues/18)
 
 ## [1.2.1] - 2023-04-05
 - Support for all future IDE builds. [#15](https://github.com/LiLittleCat/intellij-pangu/issues/15)
@@ -39,8 +40,8 @@
 - Spacing selected content.
 - Spacing whole file.
 
-[Unreleased]: null/compare/v1.2.2...HEAD
-[1.2.2]: null/compare/v1.2.1...v1.2.2
+[Unreleased]: https://github.com/LiLittleCat/intellij-pangu/compare/v1.2.2...HEAD
+[1.2.2]: https://github.com/LiLittleCat/intellij-pangu/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/LiLittleCat/intellij-pangu/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/LiLittleCat/intellij-pangu/compare/v1.1.3...v1.2.0
 [1.1.3]: https://github.com/LiLittleCat/intellij-pangu/compare/v1.1.2...v1.1.3
