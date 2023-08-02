@@ -85,6 +85,10 @@ public class Pangu {
     );
     private static final Pattern DOUBLE_SLASH_ANSG = Pattern.compile("^//[\\u0370-\\u03ff\\u1f00-\\u1fffa-z0-9]");
     private static final Pattern TRIPLE_SLASH_ANSG = Pattern.compile("^///[\\u0370-\\u03ff\\u1f00-\\u1fffa-z0-9]");
+    private static final Pattern DOUBLE_SLASH_PATTERN = Pattern.compile("^ *//[^/\\s]");
+    private static final Pattern DOUBLE_SLASH_BEGIN = Pattern.compile("^ *//");
+    private static final Pattern TRIPLE_SLASH_PATTERN = Pattern.compile("^ *///[^/\\s]");
+    private static final Pattern TRIPLE_SLASH_BEGIN = Pattern.compile("^ *///");
 
     /**
      * Performs a paranoid text spacing on {@code text}.
@@ -100,9 +104,8 @@ public class Pangu {
         Matcher qcMatcher = QUOTE_CJK.matcher(text);
         text = qcMatcher.replaceAll("$1 $2");
 
-        // todo, ignore fix quote for now, consider the content between quotes is not meant to be modified
-//        Matcher fixQuoteMatcher = FIX_QUOTE.matcher(text);
-//        text = fixQuoteMatcher.replaceAll("$1$3$5");
+        Matcher fixQuoteMatcher = FIX_QUOTE.matcher(text);
+        text = fixQuoteMatcher.replaceAll("$1$3$5");
 
         // CJK and brackets
         String oldText = text;
@@ -136,14 +139,13 @@ public class Pangu {
         text = acMatcher.replaceAll("$1 $2");
 
         // TODO add more comment patterns from different languages
-        if (DOUBLE_SLASH_ANSG.matcher(text).find()) {
-            // replace the first `//some comment` of a line to `// some comment`
-            text = text.replaceFirst("^//", "// ");
-        } else if (TRIPLE_SLASH_ANSG.matcher(text).find()) {
+        // replace the first `//some comment` of a line to `// some comment`
+        if (DOUBLE_SLASH_PATTERN.matcher(text).find()) {
+            text = DOUBLE_SLASH_BEGIN.matcher(text).replaceFirst("$0 ");
+        } else if (TRIPLE_SLASH_PATTERN.matcher(text).find()) {
             // `///` is a kind of comment syntax in Rust
-            text = text.replaceFirst("^///", "/// ");
+            text = TRIPLE_SLASH_BEGIN.matcher(text).replaceFirst("$0 ");
         }
-
         return text;
     }
 
@@ -185,7 +187,7 @@ public class Pangu {
 
 
     /**
-     * format text
+     * format text, consider the content between quotes is not meant to be modified
      *
      * @param text text to format
      * @return formatted text
