@@ -3,6 +3,7 @@
 # intellij-pangu Changelog
 
 ## [Unreleased]
+- fix: Do not format content within quotes in code. [#20](https://github.com/LiLittleCat/intellij-pangu/issues/20)
 
 ## [1.2.2] - 2023-04-28
 - Add support for `///` comments in Rust. [#18](https://github.com/LiLittleCat/intellij-pangu/issues/18)
